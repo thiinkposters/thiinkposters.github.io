@@ -1,0 +1,31 @@
+.subbutton {
+	  outline: none;
+	  height: 40px;
+	  text-align: center;
+	  width: 130px;
+	  border-radius: 40px;
+	  background: none;
+	  border: 2px solid #93AD90;
+	  color: #93AD90;
+	  letter-spacing: 1px;
+	  text-shadow: 0;
+	  font-size: 12px;
+	  font-family: 'Open Sans', sans-serif;
+	  cursor: pointer;
+	  -webkit-transition: all 0.25s ease; -webkit-transition-delay: 0;
+	  -moz-transition: all 0.25s ease; -moz-transition-delay: 0;
+	  -ms-transition: all 0.25s ease; -ms-transition-delay: 0;
+	  -o-transition: all 0.25s ease; -o-transition-delay: 0;
+	  transition: all 0.25s ease; transition-delay: 0;
+}
+.subbutton:hover {
+	  color: #193D23;
+	  background: #93AD90;
+	  font-weight: bold;
+}
+.subbutton:active {
+	  letter-spacing: 2px;
+	  background: #AFD2B6;
+	  width: 140px;
+	  height: 40px;
+}

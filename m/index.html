@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<!-- SCALING ON DEVICES -->
+
+		<meta id="meta" name="viewport" content="width=device-width; initial-scale=1.0"/>
+
+	<!-- META -->
+
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+		<!-- FACEBOOK -->
+  		<meta property="og:title" content="{ Thiink } -- Unique posters for unique people"/>
+  		<meta property="og:type" content="website"/>
+  		<meta property="og:url" content="http://www.thiinkposters.com/"/>
+  		<meta property="og:image" content="http://www.thiinkposters.com/img/logo-banner-small.jpg"/>
+  		<meta property="og:description" content="Thiink Posters is a one-of-a-kind custom poster generation service created to help aesthetically-
+  			predisposed people come by affordable, well-designed wall art to reflect their interests, hobbies, and inspirations."/>
+
+
+  		<!-- GOOGLE -->
+  		<meta name="description" content="Thiink Posters is a one-of-a-kind custom poster generation service created to help aesthetically-predisposed
+  			people come by affordable, well-designed wall art to reflect their interests, hobbies, and inspirations."/>
+  		<meta name="keywords" content="thiink, thiink posters, custom posters, think posters, posters, movie posters, art, prints, art prints, art posters,
+  		dorm posters, tv posters, music posters, college decorating, decorations, interior design, wall decorations, adobe photoshop, adobe illustrator, design,
+  		pop culture, dorms, college, poster design, kelli rockwell, pomona college, pomona, sport posters, hobby posters, expression, printed"/>
+  		<meta name="author" content="Kelli Rockwell"/>
+  		<meta name="copyright" content="2013-2015"/>
+
+  		<!-- TWITTER -->
+  		<meta name="twitter:card" content="summary"/>
+  		<meta name="twitter:site" content="Thiink Posters"/>
+  		<meta name="twitter:url" content="https://www.thiinkposters.com"/>
+  		<meta name="twitter:title" content="Thiink"/>
+  		<meta name="twitter:description" content="Thiink Posters is a one-of-a-kind custom poster generation service I created to help aesthetically-
+  			predisposed people come by affordable, well-designed wall art to reflect their interests, hobbies, and inspirations."/>
+  		<meta name="twitter:image" content="http://www.thiinkposters.com/img/thiink-logo-128.jpg"/>
+
+  		<!-- SITE -->
+		<title>{ Thiink } -- Unique posters for unique people</title>
+		<link rel="canonical" href="http://thiinkposters.com/"/>
+		<link rel="alternate" href="m.thiinkposters.com/"/>
+  		<link href="http://thiinkposters.com/img/thiink-favicon.png" rel="icon" type="image/png"/>
+
+  	<!-- IMPORTS -->
+
+		<!-- FONTS -->
+		<link href="http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic" rel="stylesheet" type="text/css"/>
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:800italic,400" rel="stylesheet" type="text/css"/>
+		<link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css"/>
+		<link href="http://fonts.googleapis.com/css?family=Rokkitt:700" rel="stylesheet" type="text/css"/>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="http://normalize-css.googlecode.com/svn/trunk/normalize.min.css"/>
+		<link rel="stylesheet" href="../css/mobile.css" type="text/css"/>
+		<link rel="stylesheet" href="../css/navigation-styles.css" type="text/css"/>
+		<link rel="stylesheet" href="../css/submit-button.css" type="text/css"/>
+		<link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="../css/jquery-ui-mobile.css" type="text/css"/>
+
+		<!-- JQUERY -->
+		<script type="text/javascript" src="../js/jquery.1.11.3.min.js"></script>
+		<!--[if lt IE 9]>
+			<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif]-->
+		<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+
+		<!-- MODERNIZR -->
+		<script type="text/javascript" src="../js/modernizr.custom.js"></script>
+
+		<!-- TYPERENDERING -->
+		<script type="text/javascript" src="../js/trmix.min.js"></script>
+
+		<!-- UNSLIDER -->
+		<script type="text/javascript" src="../js/unslider.min.js"></script>
+
+	<script type="text/javascript">
+
+		/**
+		 * ACCORDION FUNCTION
+		 *
+		 * These lines initialize the "accordion" feature prevalent on the Meet Thiink, quotes, and price table sections of the site,
+		 * creating the expanding divisions that spring up when a section header is clicked. They call the pre-loaded function
+		 * "accordion" from the jquery ui package.
+		 *
+	  	 **/
+		  	$(function() {
+		    	$( "#accordion-about" ).accordion({
+		     		collapsible: true,
+		     		active: false,
+		     		animate: 600,
+		     		heightStyle: "content"
+		   		});
+		   	$( "#accordion-price" ).accordion({
+		     		collapsible: true,
+		     		active: false,
+		     		animate: 600,
+		     		heightStyle: "content"
+		   		});
+		   	$( ".accordion-quote" ).accordion({
+		   		collapsible: true,
+		   		active: false,
+		   		animate: 600,
+		   		heightStyle: "content"
+		   		});
+		  	});
+
+
+	  	/**
+	  	 * STICKY HEADER FUNCTION
+	  	 *
+	  	 * These lines, which trigger on scrolling, station the mobile navigation bar at the top of the screen by assigning it
+	  	 * the class "sticky", which moves it to position top: 0px.
+	  	 *
+	  	 **/
+			$(window).scroll(function() {
+				if ($(window).scrollTop() > 60) {
+					$('.nav-bar').addClass('sticky');
+				} else {
+					$('.nav-bar').removeClass('sticky');
+				}
+			});
+
+		/**
+		 * DESKTOP SITE REDIRECT
+		 *
+		 * This conditional checks if the user is viewing the site from one of a list of known mobile agents and, if they are not,
+		 * redirects them to the desktop (main) version of the site.
+		 *
+		 **/
+			if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+				var url = "http://www.thiinkposters.com/";
+	 			$(location).attr('href',url);
+			};
+
+	</script>
+
+</head>
+
+
+<body>
+
+<div id="main">
+
+	<div class="nav-bar">
+	    <div class="row">
+	        <a class="logo" href="#">thi<em>ink</em></a>
+	        <div class="mobile-toggle">
+	            <span></span><span></span><span></span>
+	        </div>
+	        <div class="relative-container">
+	        	<center><div class="nav-container"><ul>
+	                <a href="#top"><li>TO THE TOP</li></a>
+	                <a href="#who"><li>MEET THIINK</li></a>
+	                <a href="#hear"><li>HEAR FROM OTHERS</li></a>
+	                <a href="#how"><li>HOW IT WORKS</li></a>
+	                <a class="last" href="#you"><li>ORDER YOURS</li></a>
+		        </ul></div></center>
+		</div>
+	    </div>
+	</div>
+
+
+	<!-- TITLE SECTION -->
+	<div class="anchor"><span id="top"></span></div>
+	<div class="title-banner cover-area-div"></div>
+
+
+	<!-- ABOUT SECTION -->
+	<div class="anchor"><span id="who"></span></div>
+	<div id="about" class="content">
+		<center>
+		<div id="about-text">
+			<div style="display: block">
+				<h3>meet thi<em>ink</em></h3><br/>
+				<h4>My name is <em>Kelli Rockwell</em> , and I like Photoshop.</h4>
+			</div>
+			<h2>Thiink Posters is a one-of-a-kind custom poster generation service I created to help aesthetically-predisposed people of the Claremont Colleges
+			come by affordable, well-designed wall art to reflect their interests, hobbies, and inspirations. Read on to learn more about me and my business!</h2>
+			<div id="accordion-about">
+				<h5>the mission</h5>
+					<div>
+						<p>
+						The concept behind Thiink is creating unique posters for unique people. I want to take something you love—anything
+						at all—and create a work that showcases why you love it. To that end, the design is a collaboration between you and
+						me: Your job is to think about and articulate verbally this thing that you appreciate, and then my job is to translate
+						what you have just articulated into visual design and save you the trouble of physically acquiring the product.
+						</p>
+					</div>
+				<h5>the origin</h5>
+			 		<div>
+					   	<p>
+					        In the summer of 2013, as a rising first-year at Pomona College, I began shopping for college supplies online plenty
+						early. Soon, the objects of my search turned from silverware and bedding to decorations—specifically, posters. Much
+						to my chagrin, I could not find posters of anything outside of mainstream media or Van Gogh for less than $30 a print.
+						Now don’t get me wrong, I love a good Starry Night as much as the next college student, but I had other ideas for my
+						future dorm walls.
+						</p>
+						<p>
+						Determined as ever and filled with hungry ambition, I turned to my favorite graphics program, Adobe Photoshop, and
+						started creating the posters I had hoped to find. Many quotes, characters, fonts, and textures later, I had a room full of
+						absolutely unique posters, some of which were requests I had taken from friends and family. The following summer, I
+						offered up my services again—this time to the new incoming first-years—and was met with a lot of enthusiasm. From
+						this incipient business sprouted Thiink.
+						</p>
+			  		</div>
+			  	<h5>the person</h5>
+			  		<div>
+					    <p>
+					    My name is Kelli. I am currently a rising third-year undergraduate at Pomona College studying physics and computer
+					    science. I am a scientist, a programmer, an engineer, and an artist. I have lots of interests and little dislikes,
+					    I own too many paint samples and too few pillows, and I wish I had more hours in the day and fewer distractions in the
+					    hour. Pleased to make your acquaintance!
+					    </p>
+					    <p>
+					    Use the following platforms to connect with or contact me!</p>
+					    	<center><table id="contact-table"><tr>
+					       		<td width="25%"><a href="https://www.facebook.com/kelli.rockwell"><i class="profile fa fa-fb fa-2x"></i></a></td>
+					    		<td width="25%"><a href="https://www.linkedin.com/in/kellirockwell"><i class="profile fa fa-lnkin fa-2x"></i></a></td>
+					   		<td width="25%"><a href="mailto:click-to-send-me-email!" onclick="this.href=this.href.replace(/click-to-send-me/,'kellirockwell')
+								.replace(/-/,'@').replace(/email!/,'mail.com')"><i class="profile fa fa-envelope fa-2x"></i></a></td>
+					    		<td width="25%"><a style="display: block; z-index: 9;"><i class="profile fa fa-paint-brush fa-2x"></i></a>
+					    			<div style="position: relative; height: 0px; top: -40px;">
+					    				<img src="../img/coming-soon.gif" style="height: 50px; opacity: .5;" alt="Portfolio Coming Soon"/>
+					    			</div>
+					    		</td>
+					    	</tr></table></center>
+			  		</div>
+			</div>
+			<p> </p>
+			</div>
+		</center>
+	</div>
+
+
+	<!-- POSTER INTERJECTION SECTION -->
+	<center>
+	<div id="overflow-container">
+		<div id="poster-banner">
+			<center><img src="../img/poster-collage-landscape.png" alt="Collage of Thiink custom posters"/></center>
+		</div>
+	</div>
+	</center>
+
+
+	<!-- QUOTES SECTION -->
+	<center>
+	<table id="quote-block"><tr>
+		<td class="quote-cell">
+			<div class="anchor" style="position: relative; top: -70px;"><span id="hear"></span></div>
+			<h3>hear <em>from</em> others</h3>
+			<p class="intro">At Thiink Posters, I am happiest when you are happiest. Here are some testimonials from a handful of happy custom poster recipients!</p>
+			<div class="quote-container">
+				<div class="quote-header">
+					<h5><i>&#8220;This work of art captured the atmosphere and theme of the words perfectly, and is now
+					proudly on display in my room.&#8221;</i></h5>
+				</div>
+				<h5><b>Christina Tong</b></h5>
+			</div>
+			<img src="../img/christina-profile.png" class="prof" alt="Christina Tong recommends Thiink Posters"/>
+			<div class="accordion-quote">
+				<h6>read more and see the poster</h6>
+				<div class="poster-cell">
+					<img src="../img/got-poster-475.jpg" alt="Game of Thrones custom poster by Thiink Posters"/>
+					<p>"Kelli took a Game of Thrones-themed quote and image and crafted a beautifully designed, striking, custom poster.
+					This work of art captured the atmosphere and theme of the words perfectly, and is now proudly on display in my room.
+					Kelli was reasonable and upfront about prices, sizing, and time to creation. She was also professional and extremely
+					attentive to my design preferences. I will be returning to her for all of my future poster needs!"</p>
+				</div>
+			</div>
+		</td></tr>
+		<tr><td class="quote-cell maroon">
+			<div class="quote-container">
+				<div class="quote-header">
+					<h5><i>&#8220;She was more than willing to make even the most minor edits to ensure I was happy with the
+					 final product.&#8221;</i></h5>
+				</div>
+				<h5><b>Maya Kaul</b></h5>
+			</div>
+			<img src="../img/maya-profile.png" class="prof" alt="Maya Kaul recommends Thiink Posters"/>
+			<div class="accordion-quote">
+				<h6>read more and see the poster</h6>
+				<div class="poster-cell">
+					<img src="../img/world-map-poster-475.jpg" alt="World map with quote custom poster by Thiink Posters"/>
+					<p>"Kelli was able to take my favorite quotation of all time and present it in an interesting way that truly captures its
+					essence. She conceptualized a design that encapsulated different ideas I wanted, even though I did not know how to
+					incorporate them myself. Most importantly, she was more than willing to make even the most minor edits to ensure I was
+					happy with the final product. Overall, she did an excellent job, and I would love to do business with her again!"</p>
+				</div>
+			</div>
+		</td></tr>
+		<tr><td class="quote-cell">
+			<div class="quote-container">
+				<div class="quote-header">
+					<h5><i>&#8220;In the future, if I ever want a well-designed and high quality custom poster, I know that Kelli
+					will be the first person I go to.&#8221;</i></h5>
+				</div>
+				<h5><b>Sameer Rana</b></h5>
+			</div>
+			<img src="../img/sameer-profile.png" class="prof" alt="Sameer Rana recommends Thiink Posters"/>
+			<div class="accordion-quote">
+				<h6>read more and see the poster</h6>
+				<div class="poster-cell">
+					<img src="../img/sonder-poster-475.jpg" alt="Word 'Sonder' custom art poster by Thiink Posters"/>
+					<p>"Approximately one year ago, I messaged Kelli asking if she could create a custom typographical poster for me. I
+					provided her with a word and vaguely asked her to do what she could. Soon enough, she returned with three potential
+					stylings, each one better than the next. I picked my favorite one, asked for a 24x36 sizing, and picked it up a few weeks
+					later. The poster was absolutely perfect and hung proudly as the centerpiece of my dorm room. Overall, besides her artistic
+					creativity and impressive graphic design skills, Kelli was also very patient and responsive, which I genuinely appreciated. In
+					the future, if I ever want a well-designed and high-quality custom poster, I know that Kelli will be the first person I go to."</p>
+				</div>
+			</div>
+		</td>
+	</tr></table>
+	</center>
+
+
+	<!-- HOW IT WORKS SECTION -->
+	<div class="work-banner cover-area-div"></div>
+	<div class="anchor"><span id="how"></span></div>
+	<div id="how">
+		<center>
+		<h3>how it <em>works</em></h3>
+		<p class="intro">Wondering how the custom poster process works? I have outlined the major steps of the process here. Read on to find out!</p>
+		<table class="how-block"><tr>
+			<td class="how-image-cell">
+				<img src="../img/lightbulb.gif" width="90%" alt="Idea: With Thiink Posters, you decide what your poster is about."/>
+			</td></tr>
+			<tr><td class="how-text-cell">
+				<h4><em>idea</em></h4>
+				<p><strong><em>You decide what your poster is about.</em></strong>
+				From people and places to movies and literature to music and art to sandwiches and breeds of ostrich, there are no
+				limits to your idea. Obsessed with a band so underground that they only trade merchandise in exchange for oysters?
+				Love that one tv show from the early 90’s that no one else appreciates anymore? Dying for a poster that actually
+				showcases your favorite One Direction member’s flowing locks? Let me make you a poster.</p>
+			</td>
+		</tr></table>
+
+		<table class="how-block"><tr>
+			<td class="how-image-cell">
+				<img src="../img/paint.gif" width="90%" alt="Design: With Thiink Posters, I'll work with you to make the best design."/>
+			</td></tr>
+			<tr><td class="how-text-cell">
+				<h4>design</h4>
+				<p><strong>I’ll work with you to make the best design.</strong>
+				No matter if your starting point is a blueprint with designated color palette or three words and a Google image result,
+				we’ll get you to a design. You can be as involved or uninvolved, fussy or laid-back, and crazy or straightforward as
+				you want. Let me follow your lead.</p>
+			</td>
+		</tr></table>
+		<table class="how-block"><tr>
+			<td class="how-image-cell">
+				<img src="../img/dollar-sign.gif" width="90%" alt="Price: With Thiink Posters, start building a poster without unbuilding your life's
+				savings."/>
+			</td></tr>
+			<tr><td class="how-text-cell price">
+				<h4><em>price</em></h4>
+				<p><strong><em>Start building a poster without unbuilding your life’s savings.</em></strong>
+				Compare to similar poster and decor websites, where budget posters are often ordinary, low-quality prints hardly larger
+				than a piece of paper. Rather than plastering money to your walls, use Thiink to produce works that are large, unique,
+				and beautiful—without the blood, sweat, and tears.</p>
+				<div id="accordion-price">
+					<h6>Check out the pricing system.</h6>
+						<div><center><div class="price-container">
+							<table class="price-table">
+								<tr>
+									<th>&nbsp;</th>
+									<th>size</th>
+									<th>base price*</th>
+								</tr>
+								<tr>
+									<td><img src="../img/small-box.gif" alt="Thiink Posters custom posters"/></td>
+									<td>12 x 18</td>
+									<td>$20</td>
+								</tr>
+								<tr>
+									<td><img src="../img/med-small-box.gif" alt="Thiink Posters custom posters"/></td>
+									<td>14 x 21</td>
+									<td>$22</td>
+								</tr>
+								<tr>
+									<td><img src="../img/med-box.gif" alt="Thiink Posters custom posters"/></td>
+									<td>16 x 24</td>
+									<td>$24</td>
+								</tr>
+								<tr>
+									<td><img src="../img/med-large-box.gif" alt="Thiink Posters custom posters"/></td>
+									<td>20 x 30</td>
+									<td>$28</td>
+								</tr>
+								<tr>
+									<td><img src="../img/large-box.gif" alt="Thiink Posters custom posters"/></td>
+									<td>24 x 36</td>
+									<td>$34</td>
+								</tr>
+								<tr>
+									<td colspan="3">*Prices are calculated by summing the base price with an "effort" cost determined by
+									the amount of work necessary to complete a requested design. Total cost will never exceed $15 above
+									the base price.</td>
+								</tr>
+							</table>
+						</div></center></div>
+				</div>
+			</td>
+		</tr></table>
+		<table class="how-block"><tr>
+			<td class="how-image-cell star">
+				<img src="../img/star.gif" width="90%" alt="Result: With Thiink Posters, take to your walls a poster like no other."/>
+			</td></tr>
+			<tr><td class="how-text-cell">
+				<h4>result</h4>
+				<p><strong>Take to your walls a poster like no other.</strong>
+				Printed on premium luster professional-grade paper and shipped via USPS priority mail, your ultra-high-resolution poster
+				will captivate all those who visit the room—unless, of course, your poster is the finishing touch to that shrine in your
+				closet that you think no one knows about. Whatever your decision, each poster will fulfill the purpose it was created for.</p>
+			</td>
+		</tr></table>
+		</center>
+	</div>
+	</center>
+
+
+	<!-- GALLERY SECTION -->
+	<div style="position: relative;">
+		<div style="width: 100%;"><!-- CAUTION: THIS AREA IS EXTREMELY WHITE-SPACE-SENSITIVE -->
+			<div class="contain-area-div" style="background-image: url('../img/gallery-small.jpg'); background-position: left top; width: 100%;">
+				<div style="display: block; height: 0; position: relative; z-index: 100;">
+					<!-- FORWARD-MOST PEOPLE AND FRAME OVERLAY -->
+					<img class="gallery-woman" src="../img/gallery-woman-small.png" width="100%" alt="Thiink Custom Poster Gallery"/>
+				</div>
+				<!-- LEFT SPACER --><div style="width: 28.6%; display: inline-block; margin: 0; padding: 0;">
+					<img src="../img/spacer.gif" style="max-width: 100%; height: auto;" alt=" "/>
+				<!-- END LEFT SPACER --></div><!-- MIDDLE (UNSLIDER) --><div class="slide-container">
+					<!-- TOP SPACER --><div style="width: 100%; display: block; margin: 0; padding: 0;">
+					<img src="../img/spacer-top.gif" style="max-width: 100%; height: auto;" alt=" "/>
+					<!-- END TOP SPACER --></div><div class="slide-banner"><ul>
+						<li><img src="../img/luma-poster.jpg" width="100%" alt="Thiink Custom Poster Gallery"/></li>
+						<li><img src="../img/candp-poster.jpg" width="100%" alt="Thiink Custom Poster Gallery"/></li>
+						<li><img src="../img/drhorrible-poster.jpg" width="100%" alt="Thiink Custom Poster Gallery"/></li>
+						<li><img src="../img/sith-poster.jpg" width="100%" alt="Thiink Custom Poster Gallery"/></li>
+					</ul></div><!-- BOTTOM SPACER --><div style="width: 100%; display: block; margin: 0; padding: 0;">
+					<img src="../img/spacer-bottom.gif" style="max-width: 100%; height: auto;" alt=" "/>
+					<!-- END BOTTOM SPACER --></div>
+				<!-- END MIDDLE --></div><!-- RIGHT SPACER --><div style="width: 28.6%; display: inline-block; margin: 0; padding: 0;">
+					<img src="../img/spacer.gif" style="max-width:100%; height: auto;" alt=" "/><!-- END RIGHT SPACER --></div>
+			<!-- END CONTAIN-AREA-DIV AND MAIN --></div></div>
+		<!-- POSITIONED, TRANSPARENT OVERLAY FOR CLICK NAVIGATION OF UNSLIDER -->
+		<a class="unslider-slide1"><div class="gallery-overlay"> </div></a>
+	</div>
+
+
+	<!-- ORDER SECTION -->
+	<div class="anchor"><span id="you"></span></div>
+	<div id="order">
+		<h3>order <em>yours</em></h3><br/>
+		<center>
+		<div class="request-form">
+			<p><em>Thiink</em> you want a poster (haha... ha...)? It's easy to order one! To start, just
+			fill out the form below. I'll get in touch	with you to begin the designing process. And of course, payment is not due until the
+			poster is in your hand.</p>
+			<p style="padding-bottom: 30px;">
+				<strong>Unfortunately, Thiink Posters is not accepting order requests at this time.</strong>
+			</p>
+			<div name="contactform"><!--method="post" action="http://m.thiinkposters.com/request.php"-->
+				<table class="form-table">
+				<tr><td class="left">
+					<label>Full Name:</label>
+				</td>	<td class="right">
+					<input type="text" name="name" maxlength="50" class="form-input name"/>
+				</td>	</tr>
+				<tr><td class="left">
+					<label>Email Address:</label>
+				</td><td class="right">
+					<input type="text" name="email" maxlength="80" class="form-input email"/>
+				</td>	</tr>
+				<tr><td colspan="2" style="text-align: center;">
+					<label>Describe Your Poster Idea:</label>
+					<p>Tell me about colors you want or don't want, images or text to be included, mood/feel of the overall work,
+					and any other specifications you'd like to make.</p>
+					<textarea type="" name="description" maxlength="1000" class="form-input paragraph" rows="5" cols=""></textarea>
+				</td>	</tr>
+				<tr><td colspan="2" style="text-align:center">
+					<center>
+					<button class="subbutton">SUBMIT</button>
+					</center>
+				</td></tr>
+				</table>
+			</div>
+			<p align="center">If you have other questions, concerns, or feedback, please <a href="mailto:click-to-send-me-email!" onclick="this.href=this.href.replace(/click-to-send-me/,'kellirockwell').replace(/-/,'@').replace(/email!/,'mail.com')">
+			send me an email</a>!</p>
+		</div>
+		<div id="footer">Site, service, and works © 2013-2015, Kelli Rockwell. Images are used in accordance with copyright law provisions for fair use and are
+		never redistributed on their own. Posters may not be used or distributed without the consent of the owner. Website designed and developed by Kelli Rockwell.</div>
+		</center>
+	</div>
+
+	<script type="text/javascript">
+
+		/**
+		 * NAVIGATION BAR CLICK FUNCTION
+		 *
+		 * The navigation bar introduced to the mobile site collapses automatically to an expandable menu on screens less than
+		 * 966px wide. This function handles when the user clicks on the expand button by adding the "open-nav" class to the
+		 * nav-bar division if it is closed and removing it if it is open. It auxiliarily adds the "larger" class to the logo text, i.e.
+		 * increasing the size of "thiink" in the top left, and either prepares or unprepares the navigation table itself, explained in
+		 * the navigation-styles stylesheet.
+		 *
+		 **/
+			$('.mobile-toggle').click(function() {
+				if ($('.nav-bar').hasClass('open-nav')) {
+					// if the navigation menu is expanded, close it
+					$('.nav-bar').removeClass('open-nav');
+					$('.logo').removeClass('larger');
+					$('.nav-container').removeClass('v-center');
+					$('.nav-container').addClass('hide');
+				} else {
+			   		// if the navigation menu is closed, open it
+					$('.nav-bar').addClass('open-nav');
+					$('.logo').addClass('larger');
+					$('.nav-container').addClass('v-center');
+					$('.nav-container').removeClass('hide');
+			    	}
+			});
+
+			// when the user clicks a navigation link, close the navigation menu
+			$('.nav-bar ul a').click(function() {
+				if ($('.nav-bar').hasClass('open-nav')) {
+				        $('.navigation').removeClass('open-nav');
+				        $('.nav-bar').removeClass('open-nav');
+				        $('.logo').removeClass('larger');
+				        $('.nav-container').removeClass('v-center');
+				        $('.nav-container').addClass('hide');
+			    	}
+			});
+
+		/**
+		 * UNSLIDER FUNCTION
+		 *
+		 * This function initializes the slideshow feature from the poster gallery museum section by calling the pre-loaded
+		 * function "unslider" from the unslide jquery package. The latter part of this section introduces click functions that
+		 * progress the slideshow to the next slide on click.
+		 **/
+			$(function() {
+				$('.slide-banner').unslider({
+					speed: 500,
+					delay: 3000,
+					// responsive to window size changes
+					fluid: true,
+					// recursively call function once again after every animation
+					complete: function() {}
+				});
+			});
+
+			// remember the unslider objects associated with each slideshow
+			var unslider1 = $('.slide-banner').unslider();
+			var unslider2 = $('.slide-banner-2').unslider();
+
+			// on click, progress slideshow to next slide
+			$('.unslider-slide1').click(function() {
+				unslider1.data('unslider').next();
+			});
+
+	</script>
+
+</div>
+</body>
+
+</html>

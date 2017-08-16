@@ -1,0 +1,46 @@
+/******* REQUEST ISSUE & SUCCESS PAGE STYLES ********/
+/*** Referenced upon form submission for use exclusively on issue and success pages. ***/
+
+/* matches styles of order section */
+body {
+	background-image: url('../img/dust-green-bg.jpg');
+	background-repeat: repeat;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.0em;
+	color: #808C71;
+	padding: 6% 25% 6%;
+	}
+
+h1 { /* main yellow header */
+	font-size: 4.0em;
+	font-family: 'Playfair Display', serif;
+	color: #C89213;
+	}
+	
+h2 { /* issue or closing message */
+	font-size: 1.5em;
+	font-family: 'Rokkitt', serif;
+	color: #93AD90;
+	}
+
+/* handle smaller screens and mobile */	
+@media 
+only screen and (max-width: 1050px),
+(min-device-width: 768px)
+and (max-device-width: 1024px),
+(min-device-width: 320px)
+and (max-device-width: 480px), /* iPhone 2G-4S */
+(min-device-width: 320px) 
+and (max-device-width: 568px), /* iPhone 5 & 5S */
+(min-device-width : 375px) 
+and (max-device-width : 667px), /* iPhone 6 */
+(-webkit-min-device-pixel-ratio: 2),
+(device-width: 360px) 
+and (device-height: 640px), 
+(-webkit-device-pixel-ratio: 3) {
+
+	body {
+		padding: 6% 10% 6%;
+		}
+		
+	}

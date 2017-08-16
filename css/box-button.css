@@ -1,0 +1,64 @@
+﻿.box-button {
+	background-color: rgba(119, 119, 97, 0.2) /* #777761 */;
+	letter-spacing: 0.3em;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	color: #dcddcd;
+	display: inline-block;
+	font-size: 75%;
+	width: 145px;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px;
+	margin-top: 12px;
+	margin-right: 5px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	border: 2px solid #dcddcd;
+	border-radius: 6px;
+    box-sizing: content-box;
+	-webkit-transition-property:all;-webkit-transition-duration:300ms;-webkit-transition-timing-function:linear;-webkit-transition-delay:0;
+	-moz-transition-property:all;-moz-transition-duration:300ms;-moz-transition-timing-function:linear;-moz-transition-delay:0;
+	-ms-transition-property:all;-ms-transition-duration:300ms;-ms-transition-timing-function:linear;-ms-transition-delay:0;
+	-o-transition-property:all;-o-transition-duration:300ms;-o-transition-timing-function:linear;-o-transition-delay:0;
+	transition-property:all;transition-duration:300ms;transition-timing-function:linear;transition-delay:0;}
+
+.box-button:hover {
+	-webkit-transition-property:all;-webkit-transition-duration:300ms;-webkit-transition-timing-function:linear;-webkit-transition-delay:0;
+	-moz-transition-property:all;-moz-transition-duration:300ms;-moz-transition-timing-function:linear;-moz-transition-delay:0;
+	-ms-transition-property:all;-ms-transition-duration:300ms;-ms-transition-timing-function:linear;-ms-transition-delay:0;
+	-o-transition-property:all;-o-transition-duration:300ms;-o-transition-timing-function:linear;-o-transition-delay:0;
+	transition-property:all;transition-duration:300ms;transition-timing-function:linear;transition-delay:0;
+	background: rgba(56, 57, 49, 0.8);
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+	color: #dcddcd;}
+
+.box-button:active {
+	-webkit-transition-property:none;-webkit-transition-duration:300ms;-webkit-transition-timing-function:linear;-webkit-transition-delay:0;
+	-moz-transition-property:none;-moz-transition-duration:300ms;-moz-transition-timing-function:linear;-moz-transition-delay:0;
+	-ms-transition-property:none;-ms-transition-duration:300ms;-ms-transition-timing-function:linear;-ms-transition-delay:0;
+	-o-transition-property:none;-o-transition-duration:300ms;-o-transition-timing-function:linear;-o-transition-delay:0;
+	transition-property:none;transition-duration:300ms;transition-timing-function:linear;transition-delay:0;
+	background: #528570;
+	border-color: #528570;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+	color: #dcddcd;}
+	
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+
+	.box-button-table td {
+	display: block;}
+	
+	.box-button {
+	font-size: 100%;
+	width: 220px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px;
+	margin-top: 12px;
+	margin-right: 5px;}
+	
+}
